@@ -1,11 +1,8 @@
-import './index.css'
+import './index.css';
+import App from './App';
 import Nav from "./components/Nav";
 import Landing from "./components/Landing";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faShoppingCart, faTimes } from '@fortawesome/free-solid-svg-icons'
 
-
-library.add(faBars, faShoppingCart, faTimes)
 
 
 function App() {
