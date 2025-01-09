@@ -19,8 +19,13 @@ const Nav = () => {
                         <a href="/" className='nav__link'>Books</a>
                     </li>
                     <button className='btn__menu'>
-                        <FontAwesomeIcon icon="bars"/>
+                        <FontAwesomeIcon icon="bars" />
                     </button>
+                    <li className='nav__icon'>
+                        <a href="/cart" className='nav__link'>
+                            <FontAwesomeIcon icon="shopping-cart" />
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
