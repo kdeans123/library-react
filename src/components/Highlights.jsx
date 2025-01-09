@@ -1,5 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Highlight from "../components/ui/highlight";
 
 const Highlights = () => {
   return (
@@ -21,7 +22,6 @@ const Highlights = () => {
                     icon={ <FontAwesomeIcon icon="tags" />} 
                     title="Affordable"
                     para="Get your hands onpopular books for as little as $10"/>
-
             </div>
         </div>
     </section>
