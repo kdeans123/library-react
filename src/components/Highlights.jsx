@@ -1,6 +1,6 @@
 import React from 'react'
 
-const function Highlights() {
+const Highlights() {
   return (
     <section id="Highlights">
         <div className="container">
