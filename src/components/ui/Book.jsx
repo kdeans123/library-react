@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const Book = ({ book }) => {
@@ -6,11 +6,7 @@ const Book = ({ book }) => {
     <div className="book">
       <a href="" className="">
         <figure className="book__img--wrapper">
-          <img
-            src={book.url}
-            alt=""
-            className="book__img"
-          />
+          <img src={book.url} alt="" className="book__img" />
         </figure>
       </a>
       <div className="book__title">
@@ -19,28 +15,27 @@ const Book = ({ book }) => {
         </a>
       </div>
       <div className="book__ratings">
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star-half-alt" />
+        {
+          new Array(4).fill(0).map(() => <FontAwesomeIcon icon="star" />)
+        }
       </div>
       <div className="book__price">
-        {book.salePrice ?  (
-                <>
-                    <span className="book__price--normal"> 
-                        ${book.originalPrice.to.Fixed(2)}
-                    </span>
-                ${book.salePrice.toFixed(2)} 
-                </>
-                ) : (
-                    <>${book.originalPrice.toFixed(2) } </>
-                )}
-        
-             
-        
+        {book.salePrice ? (
+          <>
+            <span className="book__price--normal">              
+              ${book.originalPrice.to.Fixed(2)}
+            </span>
+            ${book.salePrice.toFixed(2)}
+          </>
+        ) : (
+          <>${book.originalPrice.toFixed(2)} </>
+        )}
       </div>
     </div>
   );
 };
 
 export default Book;
+
+// if there is sale - print original price and sale price, if no sale, then only print original price - line 27
+// we cannot map over an empty array, it will not work, so we need to fill it with zeros, it does not matter what we fill it in with because we are changing it anyway new Array(4).fill(0)  we use fill function and now it lets us map it 
