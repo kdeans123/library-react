@@ -19,7 +19,7 @@ const Book = ({ book }) => {
           new Array(Math.floor(book.rating)).fill(0).map((_, index) => <FontAwesomeIcon icon="star" key={index} />)
         }
         {
-          Number.isInteger(book.rating) && <FontAwesomeIcon icon="star-half-alt" />
+          !Number.isInteger(book.rating) && <FontAwesomeIcon icon="star-half-alt" />
         }
       </div>
       <div className="book__price">
@@ -45,5 +45,5 @@ export default Book;
 // we sometimes use index fr the key, but preferrably id, e.g. book.id so the index is unique 
 // in .map we use underscore as first parameter, as we are not using it 
 // when printing ratings we use math.floor so that it rounds the number to 4 if it is 4.5
-// for half stars we do if it is integer (meaning a whole number), then print nothing, and if it is not , print half star 
+// for half stars we do if it is integer (meaning a whole number, full number), then print nothing, and if it is not , print half star 
 // you can make this line cleaner by using double && sign so instead of: Number.isInteger(book.rating) ? '' : <FontAwesomeIcon icon="star-half-alt" />  and we read it, if the first one is true then it prints second one, if the first one is false then it prints nothing 
