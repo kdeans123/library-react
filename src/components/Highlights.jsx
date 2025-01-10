@@ -8,7 +8,8 @@ const Highlights = () => {
     <section id="Highlights">
         <div className="container">
             <div className="row">
-                <h2 className="section__title">Why choose <span className="purple">Library</span></h2>
+                <h2 className="section__title">Why choose <span className="purple">Library</span>
+                </h2>
                 <div className="highlight__wrapper">
                         <Highlight 
                             icon={ <FontAwesomeIcon icon="bolt" />} 
@@ -23,9 +24,7 @@ const Highlights = () => {
                             title="Affordable"
                             para="Get your hands onpopular books for as little as $10"/>
                 </div>
-            </div>          
-          
-
+            </div>
         </div>
     </section>
   )
