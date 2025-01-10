@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Component = () => {
+const Explore = () => {
   return (
     <section id="Explore">
         <div className="container">
