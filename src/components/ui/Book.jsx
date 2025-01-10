@@ -28,7 +28,7 @@ const Book = ({ book }) => {
         {book.salePrice ?  (
                 <>
                     <span className="book__price--normal"> 
-                        ${book.originalPrice.to?Fixed(2)}
+                        ${book.originalPrice.to.Fixed(2)}
                     </span>
                 ${book.salePrice.toFixed(2)} 
                 </>
