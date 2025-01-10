@@ -16,7 +16,7 @@ const Book = ({ book }) => {
       </div>
       <div className="book__ratings">
         {
-          new Array(4).fill(0).map(() => <FontAwesomeIcon icon="star" />)
+          new Array(4).fill(0).map((_, index) => <FontAwesomeIcon icon="star" key={index} />)
         }
       </div>
       <div className="book__price">
@@ -39,3 +39,5 @@ export default Book;
 
 // if there is sale - print original price and sale price, if no sale, then only print original price - line 27
 // we cannot map over an empty array, it will not work, so we need to fill it with zeros, it does not matter what we fill it in with because we are changing it anyway new Array(4).fill(0)  we use fill function and now it lets us map it 
+// we sometimes use index fr the key, but preferrably id, e.g. book.id so the index is unique 
+// in .map we use underscore as first parameter, as we are not using it 
