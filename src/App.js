@@ -14,6 +14,7 @@ function App() {
         <Nav />
         <Route path="/" exact component={Home} />
         <Route path="/books" render={() => <Books books={books}/>}/>
+        <Route path="/books/1" render={() => <BookInfo books={books} /> }/>
         <Footer />
       </div>
     </Router>
@@ -31,3 +32,5 @@ export default App;
 // you want to add word "exact" so that the url matches only home page and not any other page that has slash forward 
 
 // then we import books into our router, so lets create a new route
+// we create a new route and we create a component, we will use render, becasue we want this component to know about the books, lets m=pass in component 
+// and call it bookInfo and lets pass books to it
